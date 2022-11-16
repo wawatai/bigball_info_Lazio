@@ -1030,38 +1030,6 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-s
   background: #2b6de7;
   border-radius: 10px;
 }
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table {
-  width: 100%;
-  height: 100%;
-}
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr th {
-  vertical-align: middle;
-}
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr th p {
-  color: #ff8656;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-}
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td {
-  min-width: 100px;
-  height: 70%;
-  vertical-align: middle;
-}
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p {
-  color: #bcc3cd;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-}
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p span {
-  display: block;
-  color: #172c63;
-  line-height: 18px;
-}
-html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p span.disable {
-  color: #bcc3cd;
-}
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul {
   width: 100%;
   height: 100%;
@@ -1070,9 +1038,11 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul {
   display: flex;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li {
+  width: 16.6666666667%;
   min-width: 100px;
   height: 100%;
-  margin-right: 8%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li:last-child {
   margin: 0;
@@ -1123,12 +1093,12 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .tex
 html body .mainArea .tableList .listBox .tableBox .right {
   width: auto;
   height: auto;
+  background: #f1f8ff;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 html body .mainArea .tableList .listBox .tableBox .right tr th {
   vertical-align: middle;
-  padding-right: 32px;
 }
 html body .mainArea .tableList .listBox .tableBox .right tr th p {
   color: #ff8656;
@@ -1137,10 +1107,9 @@ html body .mainArea .tableList .listBox .tableBox .right tr th p {
   text-align: center;
 }
 html body .mainArea .tableList .listBox .tableBox .right tr td {
-  width: 152px;
+  width: 120px;
   height: 70%;
   vertical-align: middle;
-  padding-right: 32px;
 }
 html body .mainArea .tableList .listBox .tableBox .right tr td p {
   color: #bcc3cd;

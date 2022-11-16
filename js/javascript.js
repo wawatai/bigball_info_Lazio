@@ -10,7 +10,7 @@ $(function(){
     })
 })
 
-$(function () {
+$(function(){
     var th = $('.mainArea');
     var wh = window.innerHeight;
     th.css("height", (String(wh - 335) + "px"));
