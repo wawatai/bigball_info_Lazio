@@ -1,0 +1,58 @@
+nav {
+    width: 80px;
+    height: 100%;
+    background: $nav_BG;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 230px;
+
+        li {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            &:hover,&:active,&.active {
+                background: $mainBG_2;
+
+                i {
+                    background-position-y: 100%;
+                }
+            }
+
+            i {
+                width: 25px;
+                height: 25px;
+
+                &.basketball {
+                    background-position-x: 0;
+                }
+                &.soccer {
+                    background-position-x: 25%;
+                }
+                &.baseball {
+                    background-position-x: 50%;
+                }
+                &.iceball {
+                    background-position-x: 75%;
+                }
+                &.tennis {
+                    background-position-x: 100%;
+                }
+            }
+        }
+    }
+}

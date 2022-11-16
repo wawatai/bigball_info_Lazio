@@ -1,0 +1,422 @@
+.mainArea {
+    width: 100%;
+    height: 100%;
+    background: $mainArea_BG;
+    padding: 0 205px 0 80px;
+
+    //topBtnBox
+    .topBtnBox {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        ul {
+            width: auto;
+            height: auto;
+            background: $mainBG_2;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+
+            li {
+                width: auto;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+                padding: 0 16px;
+                margin: 0 16px;
+
+                &::before,
+                &::after {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    width: 34px;
+                    height: 100%;
+                }
+
+                &::before {
+                    left: -34px;
+                    transform: scaleX(-1);
+                }
+                &::after {
+                    right: -34px;
+                }
+                
+                &:hover {
+                    background: $mainBG_3;
+                    z-index: 1;
+
+                    &::before,
+                    &::after {
+                        display: block;
+                    }
+
+                    p {
+                        color: $mainColor_2;
+                    }
+                }
+                &:active,&.active {
+                    background: $mainBG_1;
+
+                    &::before,
+                    &::after {
+                        display: block;
+                    }
+
+                    p {
+                        color: $mainColor_2;
+                    }
+                }
+
+                p {
+                    color: $mainColor_3;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        button {
+            width: 120px;
+            height: 36px;
+            background: $mainBG_2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                width: 30px;
+                height: 15px;
+                margin-right: 5px;
+            }
+
+            p {
+                color: $mainColor_1;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    //tableList
+    .tableList {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+
+        .listBox {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .title {
+                width: 100%;
+                height: 47px;
+                background: $mainBG_1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                p {
+                    width: auto;
+                    height: 47px;
+                    background: $mainBG_2;
+                    color: $mainArea_tableList_titleColor;
+                    font-size: 20px;
+                    font-weight: bold;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    padding: 0 16px 0 32px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -80px;
+                        width: 80px;
+                        height: 100%;
+                    }
+                }
+
+                i {
+                    width: 17px;
+                    height: 10px;
+                    transform: scaleY(-1);
+                    margin-right: 32px;
+
+                    &.active {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+
+            .tableBox {
+                width: 100%;
+                height: auto;
+                background: $mainBG_2;
+                display: flex;
+
+                .left {
+                    width: auto;
+                    height: auto;
+                    flex-shrink: 0; 
+                    
+                    tr {
+
+                        th {
+                            width: auto;
+                            height: auto;
+                            vertical-align: middle;
+                            padding: 10px 0 0 32px;
+
+                            button {
+                                width: auto;
+                                height: auto;
+                                background: $mainArea_tableList_disableBG;
+                                border-radius: 20px;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 3px 10px;
+                                margin-right: 10px;
+
+                                &:first-child {
+                                    
+                                    &.active {
+                                        background: $mainBG_3;
+
+                                        i {
+                                            background: $mainColor_2;
+                                        }
+
+                                        p {
+                                            color: $mainColor_2;
+                                        }
+                                    }
+
+                                    i {
+                                        background: $mainColor_3;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                &:last-child {
+
+                                    &.active {
+                                        background: $mainBG_1;
+
+                                        i {
+                                            background-position-y: 100%;
+                                        }
+
+                                        p {
+                                            color: $mainColor_2;
+                                        }
+                                    }
+                                }
+
+                                p {
+                                    color: $mainColor_3;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                }
+
+                                i {
+                                    width: 12px;
+                                    height: 11px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+
+                        td {
+                            width: auto;
+                            height: auto;
+                            vertical-align: middle;
+                            padding: 10px 0;
+
+                            &:first-child {
+                                padding: 10px 32px;
+
+                                p {
+                                    color: $mainColor_3;
+                                    line-height: 18px;
+                                    padding: 0;
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                width: 250px;
+                            }
+                            &:last-child {
+                                
+                                p {
+                                    border-right: solid 1px $mainBorder_1;
+                                    padding-right: 32px;
+                                }
+                            }
+
+                            p {
+                                color: $mainColor_1;
+                                font-size: 13px;
+                                font-weight: bold;
+                                
+                                &:first-child {
+                                    padding-bottom: 10px;
+                                }
+                                &:last-child {
+                                    padding-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .outerBox {
+                    width: 100%;
+                    height: auto;
+                    padding-bottom: 5px;
+                    overflow: hidden;
+                    
+                    .innerBox {
+                        width: 100%;
+                        height: 100%;
+                        overflow-x: overlay;
+                        @include scorllBar;
+
+                        table {
+                            width: 100%;
+                            height: 100%;
+        
+                            tr {
+        
+                                th {
+                                    vertical-align: middle;
+                                    
+                                    p {
+                                        color: $mainArea_tableList_tableTitle;
+                                        font-size: 13px;
+                                        font-weight: bold;
+                                        text-align: center;
+                                    }
+                                }
+        
+                                td {
+                                    min-width: 100px;
+                                    height: 70%;
+                                    vertical-align: middle;
+        
+                                    p {
+                                        color: $mainArea_tableList_disableColor;
+                                        font-size: 13px;
+                                        font-weight: bold;
+                                        text-align: center;
+
+                                        span {
+                                            display: block;
+                                            color: $mainColor_1;
+                                            line-height: 18px;
+
+                                            &.disable {
+                                                color: $mainArea_tableList_disableColor;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // ul {
+                        //     width: 100%;
+                        //     height: 100%;
+                        //     display: flex;
+                            
+                        //     li {
+                        //         min-width: 100px;
+                        //         height: 100%;
+                        //         margin-right: 8%;
+
+                        //         .smallTitle {
+                        //             width: 100%;
+                        //             height: 30%;
+                        //             color: $mainArea_tableList_tableTitle;
+                        //             font-size: 13px;
+                        //             font-weight: bold;
+                        //             display: flex;
+                        //             align-items: center;
+                        //             justify-content: center;
+                        //         }
+
+                        //         .text {
+                        //             width: 100%;
+                        //             height: 70%;
+                        //             color: $mainArea_tableList_disableColor;
+                        //             font-size: 13px;
+                        //             font-weight: bold;
+                        //             display: flex;
+                        //             flex-direction: column;
+                        //             align-items: center;
+                        //             justify-content: center;
+
+                        //             span {
+                        //                 color: $mainColor_1;
+                        //                 line-height: 18px;
+
+                        //                 &.disable {
+                        //                     color: $mainArea_tableList_disableColor;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+
+                .right {
+                    width: auto;
+                    height: auto;
+                    flex-shrink: 0;
+
+                    tr {
+
+                        th {
+                            vertical-align: middle;
+                            padding-right: 32px;
+                            
+                            p {
+                                color: $mainArea_tableList_tableTitle;
+                                font-size: 13px;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                        }
+
+                        td {
+                            width: 152px;
+                            height: 70%;
+                            vertical-align: middle;
+                            padding-right: 32px;
+
+                            p {
+                                color: $mainArea_tableList_disableColor;
+                                font-size: 13px;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1157 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+i {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+main {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+header .left::before,
+header .right::before {
+  background: url("../images/header_corner.png") no-repeat;
+  background-size: contain;
+}
+
+header .left i {
+  background: url("../images/header_leftIC.png") no-repeat;
+  background-size: 300%;
+}
+
+header .right .infoArea i {
+  background: url("../images/header_rightIC.png") no-repeat;
+  background-size: 200%;
+}
+
+header .memberList .user {
+  background: url("../images/header_userIC.png") no-repeat center;
+  background-size: contain;
+}
+
+header .lang {
+  background: url("../images/header_langIC.png") no-repeat center;
+  background-size: contain;
+}
+
+nav i {
+  background: url("../images/nav_IC.png") no-repeat;
+  background-size: 500%;
+}
+
+aside .ad_1 {
+  background: url("../images/aside_ad.png") no-repeat center;
+  background-size: contain;
+}
+
+.mainArea .topBtnBox li:hover::before,
+.mainArea .topBtnBox li:hover::after {
+  background: url("../images/mainArea_topBtn_corner_hover.png") no-repeat;
+  background-size: contain;
+}
+
+.mainArea .topBtnBox li:active::before,
+.mainArea .topBtnBox li:active::after,
+.mainArea .topBtnBox li.active::before,
+.mainArea .topBtnBox li.active::after {
+  background: url("../images/mainArea_topBtn_corner.png") no-repeat;
+  background-size: contain;
+}
+
+.mainArea .topBtnBox button i {
+  background: url("../images/mainArea_topBtn_collapse.png") no-repeat center;
+  background-size: contain;
+}
+
+.mainArea .tableList .title p::before {
+  background: url("../images/mainArea_tableTitle_corner.png") no-repeat center;
+  background-size: contain;
+}
+
+.mainArea .tableList .title i {
+  background: url("../images/arrow_1.png") no-repeat center;
+  background-size: contain;
+}
+
+.mainArea .tableList .left .analyze {
+  background: url("../images/mainArea_tableTitle_leftIC.png") no-repeat;
+  background-size: 100%;
+}
+
+footer .top i {
+  background: url("../images/footer_listIC.png") no-repeat;
+  background-size: 500%;
+}
+
+footer .top li::before,
+footer .top li::after {
+  background: url("../images/footer_corner.png") no-repeat center;
+  background-size: contain;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: overlay;
+}
+html body {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  position: relative;
+}
+html body header {
+  width: 100%;
+  height: auto;
+  min-width: 1000px;
+  position: relative;
+  z-index: 100;
+}
+html body header .topArea {
+  width: 100%;
+  height: 100px;
+  background: #2b6de7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body header .topArea .left {
+  width: auto;
+  height: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+html body header .topArea .left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -145px;
+  width: 145px;
+  height: 100%;
+}
+html body header .topArea .left ul {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body header .topArea .left ul li {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-left: 25px;
+}
+html body header .topArea .left ul li i {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+html body header .topArea .left ul li i.home {
+  background-position-x: 0;
+}
+html body header .topArea .left ul li i.event {
+  background-position-x: 50%;
+}
+html body header .topArea .left ul li i.pro {
+  background-position-x: 100%;
+}
+html body header .topArea .left ul li p {
+  color: #172c63;
+  font-size: 13px;
+  font-weight: bold;
+}
+html body header .topArea .right {
+  width: auto;
+  height: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding-right: 30px;
+}
+html body header .topArea .right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -145px;
+  width: 145px;
+  height: 100%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+html body header .topArea .right .top {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+html body header .topArea .right .top .infoArea {
+  width: auto;
+  height: auto;
+  margin-right: 25px;
+}
+html body header .topArea .right .top .infoArea ul {
+  width: auto;
+  height: auto;
+}
+html body header .topArea .right .top .infoArea ul li {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+html body header .topArea .right .top .infoArea ul li:last-child {
+  margin: 0;
+}
+html body header .topArea .right .top .infoArea ul li i {
+  width: 17px;
+  height: 17px;
+  margin-right: 15px;
+}
+html body header .topArea .right .top .infoArea ul li i.money {
+  background-position-x: 0;
+}
+html body header .topArea .right .top .infoArea ul li i.vip {
+  background-position-x: 100%;
+}
+html body header .topArea .right .top .infoArea ul li p {
+  width: 105px;
+  height: 20px;
+  border: solid 1px #e5e9ec;
+  border-radius: 2px;
+  color: #172c63;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5px;
+}
+html body header .topArea .right .top .memberList {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+html body header .topArea .right .top .memberList .user {
+  width: 20px;
+  height: 24px;
+  margin-right: 15px;
+}
+html body header .topArea .right .top .memberList p {
+  color: #172c63;
+  font-size: 18px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+html body header .topArea .right .top .memberList p span {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #ff8656 transparent;
+  margin: 4px 0 0 10px;
+}
+html body header .topArea .right .top .memberList ul {
+  display: none;
+  width: auto;
+  height: auto;
+  background: #ff8656;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  padding: 5px;
+  z-index: 10;
+}
+html body header .topArea .right .top .memberList ul.display {
+  display: block;
+}
+html body header .topArea .right .top .memberList ul li {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 5px 10px;
+}
+html body header .topArea .right .top .memberList ul li:hover, html body header .topArea .right .top .memberList ul li:active, html body header .topArea .right .top .memberList ul li.active {
+  background: #2b6de7;
+}
+html body header .topArea .right .bottom {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body header .topArea .right .bottom .outerList {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body header .topArea .right .bottom .outerList li {
+  width: auto;
+  height: auto;
+  margin-right: 20px;
+  cursor: pointer;
+}
+html body header .topArea .right .bottom .outerList li:first-child {
+  margin-right: 40px;
+}
+html body header .topArea .right .bottom .outerList li p {
+  color: #172c63;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body header .topArea .right .bottom .outerList li p span {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #ff8656 transparent;
+  margin-left: 10px;
+}
+html body header .topArea .right .bottom .lang {
+  width: 16px;
+  height: 17px;
+  position: relative;
+  cursor: pointer;
+}
+html body header .topArea .right .bottom .lang ul {
+  display: none;
+  width: auto;
+  height: auto;
+  background: #ff8656;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  padding: 5px;
+  z-index: 10;
+}
+html body header .topArea .right .bottom .lang ul.display {
+  display: block;
+}
+html body header .topArea .right .bottom .lang ul li {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 5px 10px;
+}
+html body header .topArea .right .bottom .lang ul li:hover, html body header .topArea .right .bottom .lang ul li:active, html body header .topArea .right .bottom .lang ul li.active {
+  background: #2b6de7;
+}
+html body header .teamArea {
+  width: 100%;
+  height: 120px;
+  background: #e6ecf8;
+  padding: 5px 20px;
+}
+html body header .teamArea .outerBox {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: overlay;
+  padding: 5px;
+}
+html body header .teamArea .outerBox::-webkit-scrollbar {
+  height: 5px;
+}
+html body header .teamArea .outerBox::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+html body header .teamArea .outerBox::-webkit-scrollbar-thumb {
+  background: #2b6de7;
+  border-radius: 10px;
+}
+html body header .teamArea .outerBox .teamBox {
+  width: 350px;
+  height: 85px;
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
+  position: relative;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-left: 5px;
+  margin-right: 20px;
+}
+html body header .teamArea .outerBox .teamBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: #ff8451;
+}
+html body header .teamArea .outerBox .teamBox .league {
+  color: #9c9c9c;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 8px;
+}
+html body header .teamArea .outerBox .teamBox .center {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 20px;
+}
+html body header .teamArea .outerBox .teamBox .center p {
+  width: 40%;
+  color: #172c63;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body header .teamArea .outerBox .teamBox .center p.score {
+  width: auto;
+  color: #dd5664;
+}
+html body header .teamArea .outerBox .teamBox .bottom {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+}
+html body header .teamArea .outerBox .teamBox .bottom p {
+  width: 30%;
+  color: #9c9c9c;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+html body header .teamArea .outerBox .teamBox .bottom p:nth-of-type(2) {
+  width: auto;
+}
+html body nav {
+  width: 80px;
+  height: 100%;
+  background: #0e459f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+html body nav ul {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 230px;
+}
+html body nav ul li {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+html body nav ul li:hover, html body nav ul li:active, html body nav ul li.active {
+  background: #ffffff;
+}
+html body nav ul li:hover i, html body nav ul li:active i, html body nav ul li.active i {
+  background-position-y: 100%;
+}
+html body nav ul li i {
+  width: 25px;
+  height: 25px;
+}
+html body nav ul li i.basketball {
+  background-position-x: 0;
+}
+html body nav ul li i.soccer {
+  background-position-x: 25%;
+}
+html body nav ul li i.baseball {
+  background-position-x: 50%;
+}
+html body nav ul li i.iceball {
+  background-position-x: 75%;
+}
+html body nav ul li i.tennis {
+  background-position-x: 100%;
+}
+html body aside {
+  width: 205px;
+  height: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.1215686275);
+          box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.1215686275);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 235px;
+  z-index: 99;
+}
+html body aside a {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+}
+html body .mainArea {
+  width: 100%;
+  height: 100%;
+  background: #dddddd;
+  padding: 0 205px 0 80px;
+}
+html body .mainArea .topBtnBox {
+  width: 100%;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+html body .mainArea .topBtnBox ul {
+  width: auto;
+  height: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .mainArea .topBtnBox ul li {
+  width: auto;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0 16px;
+  margin: 0 16px;
+}
+html body .mainArea .topBtnBox ul li::before, html body .mainArea .topBtnBox ul li::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 34px;
+  height: 100%;
+}
+html body .mainArea .topBtnBox ul li::before {
+  left: -34px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+html body .mainArea .topBtnBox ul li::after {
+  right: -34px;
+}
+html body .mainArea .topBtnBox ul li:hover {
+  background: #ff8656;
+  z-index: 1;
+}
+html body .mainArea .topBtnBox ul li:hover::before, html body .mainArea .topBtnBox ul li:hover::after {
+  display: block;
+}
+html body .mainArea .topBtnBox ul li:hover p {
+  color: #ffffff;
+}
+html body .mainArea .topBtnBox ul li:active, html body .mainArea .topBtnBox ul li.active {
+  background: #2b6de7;
+}
+html body .mainArea .topBtnBox ul li:active::before, html body .mainArea .topBtnBox ul li:active::after, html body .mainArea .topBtnBox ul li.active::before, html body .mainArea .topBtnBox ul li.active::after {
+  display: block;
+}
+html body .mainArea .topBtnBox ul li:active p, html body .mainArea .topBtnBox ul li.active p {
+  color: #ffffff;
+}
+html body .mainArea .topBtnBox ul li p {
+  color: #9c9c9c;
+  font-size: 18px;
+  font-weight: bold;
+}
+html body .mainArea .topBtnBox button {
+  width: 120px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .mainArea .topBtnBox button i {
+  width: 30px;
+  height: 15px;
+  margin-right: 5px;
+}
+html body .mainArea .topBtnBox button p {
+  color: #172c63;
+  font-size: 15px;
+  font-weight: bold;
+}
+html body .mainArea .tableList {
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+html body .mainArea .tableList .listBox {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+html body .mainArea .tableList .listBox .title {
+  width: 100%;
+  height: 47px;
+  background: #2b6de7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+html body .mainArea .tableList .listBox .title p {
+  width: auto;
+  height: 47px;
+  background: #ffffff;
+  color: #7b829f;
+  font-size: 20px;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 0 16px 0 32px;
+}
+html body .mainArea .tableList .listBox .title p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -80px;
+  width: 80px;
+  height: 100%;
+}
+html body .mainArea .tableList .listBox .title i {
+  width: 17px;
+  height: 10px;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  margin-right: 32px;
+}
+html body .mainArea .tableList .listBox .title i.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+html body .mainArea .tableList .listBox .tableBox {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .mainArea .tableList .listBox .tableBox .left {
+  width: auto;
+  height: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th {
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  padding: 10px 0 0 32px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button {
+  width: auto;
+  height: auto;
+  background: #efefef;
+  border-radius: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3px 10px;
+  margin-right: 10px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active {
+  background: #ff8656;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active i {
+  background: #ffffff;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active p {
+  color: #ffffff;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child i {
+  background: #9c9c9c;
+  border-radius: 50%;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active {
+  background: #2b6de7;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active i {
+  background-position-y: 100%;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active p {
+  color: #ffffff;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button p {
+  color: #9c9c9c;
+  font-size: 12px;
+  font-weight: bold;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr th button i {
+  width: 12px;
+  height: 11px;
+  margin-right: 5px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td {
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td:first-child {
+  padding: 10px 32px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td:first-child p {
+  color: #9c9c9c;
+  line-height: 18px;
+  padding: 0;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td:nth-of-type(2) {
+  width: 250px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td:last-child p {
+  border-right: solid 1px #e5e9ec;
+  padding-right: 32px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td p {
+  color: #172c63;
+  font-size: 13px;
+  font-weight: bold;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td p:first-child {
+  padding-bottom: 10px;
+}
+html body .mainArea .tableList .listBox .tableBox .left tr td p:last-child {
+  padding-top: 10px;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox {
+  width: 100%;
+  height: 100%;
+  overflow-x: overlay;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar {
+  height: 5px;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar-thumb {
+  background: #2b6de7;
+  border-radius: 10px;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table {
+  width: 100%;
+  height: 100%;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr th {
+  vertical-align: middle;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr th p {
+  color: #ff8656;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td {
+  min-width: 100px;
+  height: 70%;
+  vertical-align: middle;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p {
+  color: #bcc3cd;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p span {
+  display: block;
+  color: #172c63;
+  line-height: 18px;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p span.disable {
+  color: #bcc3cd;
+}
+html body .mainArea .tableList .listBox .tableBox .right {
+  width: auto;
+  height: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .mainArea .tableList .listBox .tableBox .right tr th {
+  vertical-align: middle;
+  padding-right: 32px;
+}
+html body .mainArea .tableList .listBox .tableBox .right tr th p {
+  color: #ff8656;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+html body .mainArea .tableList .listBox .tableBox .right tr td {
+  width: 152px;
+  height: 70%;
+  vertical-align: middle;
+  padding-right: 32px;
+}
+html body .mainArea .tableList .listBox .tableBox .right tr td p {
+  color: #bcc3cd;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+html body footer {
+  width: 100%;
+  min-width: 1000px;
+  height: auto;
+  background: #2b6de7;
+  padding: 0 205px 0 80px;
+}
+html body footer .top {
+  width: 100%;
+  height: 55px;
+  background: #f1f8ff;
+}
+html body footer .top ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body footer .top ul li {
+  width: auto;
+  height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin: 0 20px;
+}
+html body footer .top ul li::before, html body footer .top ul li::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+}
+html body footer .top ul li::before {
+  left: -40px;
+}
+html body footer .top ul li::after {
+  right: -40px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+html body footer .top ul li:hover, html body footer .top ul li:active, html body footer .top ul li.active {
+  background: #2b6de7;
+}
+html body footer .top ul li:hover::before, html body footer .top ul li:hover::after, html body footer .top ul li:active::before, html body footer .top ul li:active::after, html body footer .top ul li.active::before, html body footer .top ul li.active::after {
+  display: block;
+}
+html body footer .top ul li:hover p, html body footer .top ul li:active p, html body footer .top ul li.active p {
+  color: #ffffff;
+}
+html body footer .top ul li:hover i, html body footer .top ul li:active i, html body footer .top ul li.active i {
+  background-position-y: 100%;
+}
+html body footer .top ul li p {
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body footer .top ul li i {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+html body footer .top ul li i.help {
+  background-position-x: 0;
+}
+html body footer .top ul li i.feeback {
+  background-position-x: 25%;
+}
+html body footer .top ul li i.event {
+  background-position-x: 50%;
+}
+html body footer .top ul li i.rule {
+  background-position-x: 75%;
+}
+html body footer .top ul li i.about {
+  background-position-x: 100%;
+  margin-top: 2px;
+}
+html body footer .bottom {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body footer .bottom p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
