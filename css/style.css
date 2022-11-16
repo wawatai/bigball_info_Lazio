@@ -784,7 +784,7 @@ html body .mainArea .topBtnBox ul li p {
   font-weight: bold;
 }
 html body .mainArea .topBtnBox button {
-  width: 120px;
+  width: auto;
   height: 36px;
   background: #ffffff;
   border-radius: 10px;
@@ -797,6 +797,7 @@ html body .mainArea .topBtnBox button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 10px;
 }
 html body .mainArea .topBtnBox button i {
   width: 30px;
@@ -828,12 +829,19 @@ html body .mainArea .tableList::-webkit-scrollbar-thumb {
 }
 html body .mainArea .tableList .listBox {
   width: 100%;
-  height: auto;
+  height: 47px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
+}
+html body .mainArea .tableList .listBox.active {
+  height: auto;
+}
+html body .mainArea .tableList .listBox.active .title i {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 html body .mainArea .tableList .listBox:last-child {
   margin: 0;
@@ -887,10 +895,6 @@ html body .mainArea .tableList .listBox .title i {
           transform: scaleY(-1);
   margin-right: 32px;
 }
-html body .mainArea .tableList .listBox .title i.active {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-}
 html body .mainArea .tableList .listBox .tableBox {
   width: 100%;
   height: auto;
@@ -942,9 +946,11 @@ html body .mainArea .tableList .listBox .tableBox .left tr th button {
           justify-content: center;
   padding: 3px 10px;
   margin-right: 10px;
+  pointer-events: none;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active {
   background: #ff8656;
+  pointer-events: visible;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active i {
   background: #ffffff;
@@ -958,6 +964,7 @@ html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active {
   background: #2b6de7;
+  pointer-events: visible;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active i {
   background-position-y: 100%;
@@ -1039,7 +1046,7 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul {
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li {
   width: 16.6666666667%;
-  min-width: 100px;
+  min-width: 120px;
   height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -1091,31 +1098,76 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .tex
   color: #bcc3cd;
 }
 html body .mainArea .tableList .listBox .tableBox .right {
-  width: auto;
+  width: 130px;
   height: auto;
   background: #f1f8ff;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-html body .mainArea .tableList .listBox .tableBox .right tr th {
-  vertical-align: middle;
+html body .mainArea .tableList .listBox .tableBox .right li {
+  width: 100%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-html body .mainArea .tableList .listBox .tableBox .right tr th p {
+html body .mainArea .tableList .listBox .tableBox .right li:last-child {
+  height: 70%;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .smallTitle {
   color: #ff8656;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
 }
-html body .mainArea .tableList .listBox .tableBox .right tr td {
-  width: 120px;
-  height: 70%;
-  vertical-align: middle;
-}
-html body .mainArea .tableList .listBox .tableBox .right tr td p {
+html body .mainArea .tableList .listBox .tableBox .right li .disable {
   color: #bcc3cd;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .cardBox {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .cardBox p {
+  color: #172c63;
+  font-size: 12px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 15px;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .cardBox p i {
+  width: 6px;
+  height: 10px;
+  margin-right: 5px;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .cardBox p i.red {
+  background: #ff0000;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .cardBox p i.yellow {
+  background: #ffc600;
+}
+html body .mainArea .tableList .listBox .tableBox .right li .gameTime span {
+  display: block;
+  width: 100%;
+  color: #172c63;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 18px;
 }
 html body footer {
   width: 100%;
@@ -1126,7 +1178,7 @@ html body footer {
 }
 html body footer .top {
   width: 100%;
-  height: 55px;
+  height: 45px;
   background: #f1f8ff;
 }
 html body footer .top ul {

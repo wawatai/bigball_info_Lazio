@@ -88,13 +88,14 @@
         }
 
         button {
-            width: 120px;
+            width: auto;
             height: 36px;
             background: $mainBG_2;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 0 10px;
 
             i {
                 width: 30px;
@@ -120,11 +121,22 @@
 
         .listBox {
             width: 100%;
-            height: auto;
+            height: 47px;
             box-shadow: 0 2px 5px 0 $mainShadow_1;
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 10px;
+
+            &.active {
+                height: auto;
+
+                .title {
+
+                    i {
+                        transform: scaleY(1);
+                    }
+                }
+            }
 
             &:last-child {
                 margin: 0;
@@ -167,10 +179,6 @@
                     height: 10px;
                     transform: scaleY(-1);
                     margin-right: 32px;
-
-                    &.active {
-                        transform: scaleY(1);
-                    }
                 }
             }
 
@@ -222,11 +230,13 @@
                                 justify-content: center;
                                 padding: 3px 10px;
                                 margin-right: 10px;
+                                pointer-events: none;
 
                                 &:first-child {
                                     
                                     &.active {
                                         background: $mainBG_3;
+                                        pointer-events: visible;
 
                                         i {
                                             background: $mainColor_2;
@@ -246,6 +256,7 @@
 
                                     &.active {
                                         background: $mainBG_1;
+                                        pointer-events: visible;
 
                                         i {
                                             background-position-y: 100%;
@@ -366,6 +377,7 @@
                         //         }
                         //     }
                         // }
+
                         ul {
                             width: 100%;
                             height: 100%;
@@ -373,7 +385,7 @@
                             
                             li {
                                 width: calc(100% / 6);
-                                min-width: 100px;
+                                min-width: 120px;
                                 height: 100%;
                                 flex-shrink: 0;
 
@@ -418,34 +430,74 @@
                 }
 
                 .right {
-                    width: auto;
+                    width: 130px;
                     height: auto;
                     background: $mainArea_tableList_statusBG;
                     flex-shrink: 0;
 
-                    tr {
+                    li {
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
 
-                        th {
-                            vertical-align: middle;
-                            
+                        &:last-child {
+                            height: 70%;
+                        }
+
+                        .smallTitle {
+                            color: $mainArea_tableList_tableTitle;
+                            font-size: 13px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+
+                        .disable {
+                            color: $mainArea_tableList_disableColor;
+                            font-size: 13px;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+
+                        .cardBox {
+                            width: auto;
+                            height: auto;
+                            margin-right: 10px;
+
                             p {
-                                color: $mainArea_tableList_tableTitle;
-                                font-size: 13px;
+                                color: $mainColor_1;
+                                font-size: 12px;
                                 font-weight: bold;
-                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                line-height: 15px;
+
+                                i {
+                                    width: 6px;
+                                    height: 10px;
+                                    margin-right: 5px;
+
+                                    &.red {
+                                        background: $mainArea_tableList_redCard;
+                                    }
+                                    &.yellow {
+                                        background: $mainArea_tableList_yellowCard;
+                                    }
+                                }
                             }
                         }
 
-                        td {
-                            width: 120px;
-                            height: 70%;
-                            vertical-align: middle;
+                        .gameTime {
 
-                            p {
-                                color: $mainArea_tableList_disableColor;
+                            span {
+                                display: block;
+                                width: 100%;
+                                color: $mainColor_1;
                                 font-size: 13px;
                                 font-weight: bold;
-                                text-align: center;
+                                text-align: right;
+                                line-height: 18px;
                             }
                         }
                     }
