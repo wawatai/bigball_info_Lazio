@@ -513,6 +513,7 @@ html body header .teamArea .outerBox {
   padding: 5px;
 }
 html body header .teamArea .outerBox::-webkit-scrollbar {
+  width: 5px;
   height: 5px;
 }
 html body header .teamArea .outerBox::-webkit-scrollbar-track {
@@ -690,6 +691,13 @@ html body .mainArea {
   width: 100%;
   height: 100%;
   background: #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 205px 0 80px;
 }
 html body .mainArea .topBtnBox {
@@ -704,6 +712,8 @@ html body .mainArea .topBtnBox {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 0 10px;
 }
 html body .mainArea .topBtnBox ul {
@@ -800,14 +810,33 @@ html body .mainArea .topBtnBox button p {
 }
 html body .mainArea .tableList {
   width: 100%;
-  height: auto;
-  padding: 0 10px;
+  height: 100%;
+  overflow-y: overlay;
+  padding: 0 10px 20px;
+}
+html body .mainArea .tableList::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html body .mainArea .tableList::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 10px;
+}
+html body .mainArea .tableList::-webkit-scrollbar-thumb {
+  background: #2b6de7;
+  border-radius: 10px;
 }
 html body .mainArea .tableList .listBox {
   width: 100%;
   height: auto;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 10px;
+}
+html body .mainArea .tableList .listBox:last-child {
+  margin: 0;
 }
 html body .mainArea .tableList .listBox .title {
   width: 100%;
@@ -869,6 +898,21 @@ html body .mainArea .tableList .listBox .tableBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+html body .mainArea .tableList .listBox .tableBox:last-child::before {
+  display: none;
+}
+html body .mainArea .tableList .listBox .tableBox::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -1px;
+  width: calc(100% - 64px);
+  height: 2px;
+  background: #e5e9ec;
 }
 html body .mainArea .tableList .listBox .tableBox .left {
   width: auto;
@@ -975,6 +1019,7 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox {
   overflow-x: overlay;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar {
+  width: 5px;
   height: 5px;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar-track {
@@ -1015,6 +1060,64 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr t
   line-height: 18px;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox table tr td p span.disable {
+  color: #bcc3cd;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li {
+  min-width: 100px;
+  height: 100%;
+  margin-right: 8%;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li:last-child {
+  margin: 0;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .smallTitle {
+  width: 100%;
+  height: 30%;
+  color: #ff8656;
+  font-size: 13px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .text {
+  width: 100%;
+  height: 70%;
+  color: #bcc3cd;
+  font-size: 13px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .text span {
+  color: #172c63;
+  line-height: 18px;
+}
+html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .text span.disable {
   color: #bcc3cd;
 }
 html body .mainArea .tableList .listBox .tableBox .right {

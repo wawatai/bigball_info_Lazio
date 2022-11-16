@@ -32,6 +32,7 @@ $mainShadow_1: #0000001f;
 //套件
 @mixin scorllBar {
     &::-webkit-scrollbar {
+        width: 5px;
         height: 5px;
     }
 
