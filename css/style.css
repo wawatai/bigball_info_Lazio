@@ -845,6 +845,8 @@ html body .mainArea .tableList .listBox {
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
   border-radius: 10px;
   overflow: hidden;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   margin-bottom: 10px;
 }
 html body .mainArea .tableList .listBox.active {

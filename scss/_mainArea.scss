@@ -125,6 +125,7 @@
             box-shadow: 0 2px 5px 0 $mainShadow_1;
             border-radius: 10px;
             overflow: hidden;
+            transition: 0.3s all;
             margin-bottom: 10px;
 
             &.active {
