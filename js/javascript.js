@@ -26,6 +26,34 @@ $(function(){
 
 //mainArea table展開
 $(function(){
+    // $(document).on("click",".mainArea .tableList .title",function(){
+    //     $(this).closest(".listBox")
+    //     .toggleClass("active");
+
+    //     $(".mainArea .tableList .listBox").each(function(){
+            
+    //         if($(this).hasClass("active"))
+    //         {
+    //             var n = $(this).find(".tableBox").length;
+
+    //             if(n == 1)
+    //             {
+    //                 $(this)
+    //                 .css("height",""+ (n * 155) +"");
+    //             }
+    //             else
+    //             {
+    //                 $(this)
+    //                 .css("height",""+ (n * 108 + 47) +"");
+    //             }
+    //         }
+    //         else
+    //         {
+    //             $(this)
+    //             .css("height","47px");
+    //         }
+    //     })
+    // })
     $(".mainArea .tableList .title").on("click",function(){
         $(this).closest(".listBox")
         .toggleClass("active");
