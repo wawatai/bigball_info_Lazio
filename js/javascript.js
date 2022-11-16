@@ -53,3 +53,24 @@ $(function(){
         .siblings().removeClass("active");
     })
 })
+
+//chatroom
+$(function(){
+    $(".chatroom textarea").keydown(function(event){
+        if(event.which == 13)
+        {
+            var n = $(".chatroom textarea").val();
+
+            $(".chatroom .chatArea")
+            .append("<div class='cus'><p>"+ n +"</p></div>");
+
+            $(".chatroom textarea")
+            .val("");
+        }
+    })
+
+    $(".chatroom .title").on("click",function(){
+        $(this).closest(".chatroom")
+        .toggleClass("active");
+    })
+})
