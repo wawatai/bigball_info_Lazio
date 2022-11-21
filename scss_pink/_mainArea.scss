@@ -1,6 +1,7 @@
 .mainArea {
     width: 100%;
     height: 100%;
+    background: $mainBG_1;
     display: flex;
     flex-direction: column;
     padding: 0 205px 0 80px;
@@ -18,32 +19,23 @@
         ul {
             width: auto;
             height: auto;
+            background: $mainBG_3;
+            border-radius: 30px;
+            box-shadow: 0 0 8px 1px $mainShadow_1 inset;
             display: flex;
+            padding: 2px;
+            margin-top: 3px;
 
             li {
                 width: auto;
                 height: 32px;
-                background: $mainBG_2;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                padding: 0 32px;
-                margin-right: 5px;
-                
-                &:hover,&:active,&.active {
-                    background: $mainArea_topBtn_hoverBG;
+                @include btnStyle_1;
+                font-size: 18px;
+                margin-right: 10px;
+                padding: 0 25px;
 
-                    p {
-                        color: $mainColor_2;
-                        font-weight: bold;
-                    }
-                }
-
-                p {
-                    color: $mainColor_1;
-                    font-size: 16px;
+                &:last-child {
+                    margin: 0;
                 }
             }
         }
@@ -52,13 +44,6 @@
             width: auto;
             height: 36px;
             @include collapseBtn;
-
-            &:hover,&:active,&.active {
-
-                i {
-                    background-position-y: 100%;
-                }
-            }
 
             i {
                 width: 30px;
@@ -74,23 +59,33 @@
         height: 100%;
         overflow-y: overlay;
         padding: 0 10px 20px;
-        @include scorllBar;
+        @include scorllBar_2;
 
         .listBox {
             width: 100%;
-            height: 47px;
+            height: 45px;
             border-radius: 10px;
             overflow: hidden;
-            transition: 0.3s all;
+            transition: 0.3s height;
             margin-bottom: 10px;
 
             &.active {
                 height: auto;
+                border: solid 2px $mainArea_tableList_Border;
 
                 .title {
+                    background: $mainBG_3;
 
                     i {
                         transform: scaleY(1);
+                        filter: grayscale(1) brightness(10);
+                    }
+
+                    p {
+
+                        &::before {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -101,7 +96,7 @@
 
             .title {
                 width: 100%;
-                height: 47px;
+                height: 45px;
                 background: $mainBG_2;
                 display: flex;
                 align-items: center;
@@ -110,14 +105,27 @@
 
                 p {
                     width: auto;
-                    height: 47px;
-                    color: $mainColor_2;
+                    height: 45px;
+                    background: $mainBG_2;
+                    border-radius: 5px 0 0 0;
+                    color: $mainColor_1;
                     font-size: 20px;
                     font-weight: bold;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
+                    position: relative;
                     padding: 0 16px 0 32px;
+
+                    &::before {
+                        display: none;
+                        content: "";
+                        position: absolute;
+                        width: 72px;
+                        height: 100%;
+                        right: -72px;
+                        top: 0;
+                    }
                 }
 
                 i {
@@ -131,23 +139,24 @@
             .tableBox {
                 width: 100%;
                 height: auto;
-                background: $mainBG_3;
+                background: $mainBG_2;
                 display: flex;
                 position: relative;
 
-                &:last-child {
-
-                    .left,
-                    .outerBox,
-                    .right {
-                        border: none;
-                    }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: calc(100% - 60px);
+                    height: 2px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -1px;
+                    background: $mainBorder_1;
                 }
 
                 .left {
                     width: auto;
                     height: auto;
-                    border-bottom: solid 1px $mainBorder_1;
                     flex-shrink: 0; 
                     
                     tr {
@@ -182,20 +191,14 @@
                                 &:last-child {
 
                                     &.active {
-                                        background: $mainArea_smallBtn_BG_2;
 
                                         i {
                                             background-position-y: 100%;
                                         }
-
-                                        p {
-                                            color: $mainArea_smallBtn_Color_2;
-                                        }
                                     }
 
                                     &:hover,&:active {
-                                        background: $mainArea_smallBtn_hoverBG;
-                                        box-shadow: 0 0 5px 1px $mainArea_smallBtn_hoverShadow_2;
+                                        
                                     }
                                 }
 
@@ -217,7 +220,7 @@
                                 padding: 10px 32px;
 
                                 p {
-                                    color: $mainColor_1;
+                                    color: $mainColor_2;
                                     line-height: 18px;
                                     padding: 0;
                                 }
@@ -228,13 +231,13 @@
                             &:last-child {
                                 
                                 p {
-                                    border-right: solid 1px $mainBorder_1;
+                                    border-right: solid 1px $mainBorder_2;
                                     padding-right: 32px;
                                 }
                             }
 
                             p {
-                                color: $mainColor_2;
+                                color: $mainColor_3;
                                 font-size: 13px;
                                 font-weight: bold;
                                 
@@ -252,7 +255,6 @@
                 .outerBox {
                     width: 100%;
                     height: auto;
-                    border-bottom: solid 1px $mainBorder_1;
                     padding-bottom: 5px;
                     overflow: hidden;
                     
@@ -280,7 +282,7 @@
                                 .smallTitle {
                                     width: 100%;
                                     height: 30%;
-                                    color: $mainColor_2;
+                                    color: $mainArea_tableList_titleColor;
                                     font-size: 13px;
                                     font-weight: bold;
                                     display: flex;
@@ -291,7 +293,7 @@
                                 .text {
                                     width: 100%;
                                     height: 70%;
-                                    color: $mainColor_1;
+                                    color: $mainArea_tableList_disableColor;
                                     font-size: 13px;
                                     font-weight: bold;
                                     display: flex;
@@ -300,11 +302,11 @@
                                     justify-content: center;
 
                                     span {
-                                        color: $mainColor_2;
+                                        color: $mainColor_3;
                                         line-height: 18px;
 
                                         &.disable {
-                                            color: $mainColor_1;
+                                            color: $mainArea_tableList_disableColor;
                                         }
                                     }
                                 }
@@ -316,8 +318,6 @@
                 .right {
                     width: 130px;
                     height: auto;
-                    background: $mainArea_tableList_statusBG;
-                    border-bottom: solid 1px $mainArea_tableList_statusBorder;
                     flex-shrink: 0;
 
                     li {
@@ -329,10 +329,22 @@
 
                         &:last-child {
                             height: 70%;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 0;
+                                width: 1px;
+                                height: 46px;
+                                background: $mainBorder_2;
+                            }
                         }
 
                         .smallTitle {
-                            color: $mainColor_2;
+                            color: $mainArea_tableList_statusColor;
                             font-size: 13px;
                             font-weight: bold;
                             text-align: center;
@@ -351,7 +363,7 @@
                             margin-right: 10px;
 
                             p {
-                                color: $mainColor_2;
+                                color: $mainColor_3;
                                 font-size: 12px;
                                 font-weight: bold;
                                 display: flex;
@@ -378,7 +390,7 @@
                             span {
                                 display: block;
                                 width: 100%;
-                                color: $mainColor_2;
+                                color: $mainColor_1;
                                 font-size: 13px;
                                 font-weight: bold;
                                 text-align: right;
