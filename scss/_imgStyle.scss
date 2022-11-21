@@ -75,11 +75,6 @@ footer .top li::after {
 }
 
 //chatroom
-.chatroom .title::before,
-.chatroom .title::after {
-    background: url('../images/chatroom_corner.png') no-repeat center;
-    background-size: contain;
-}
 .chatroom .title i {
     background: url('../images/header_userIC.png') no-repeat center;
     background-size: contain;

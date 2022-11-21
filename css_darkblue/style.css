@@ -97,89 +97,67 @@ input[type=date]::-webkit-calendar-picker-indicator {
           appearance: none;
 }
 
-header .left::before,
-header .right::before {
-  background: url("../images/header_corner.png") no-repeat;
-  background-size: contain;
+header .topArea {
+  background: url("../images_darkblue/header_BG.jpg") no-repeat top center;
 }
 
 header .left i {
-  background: url("../images/header_leftIC.png") no-repeat;
+  background: url("../images_darkblue/header_leftIC.png") no-repeat;
   background-size: 300%;
 }
 
 header .right .infoArea i {
-  background: url("../images/header_rightIC.png") no-repeat;
+  background: url("../images_darkblue/header_rightIC.png") no-repeat;
   background-size: 200%;
 }
 
 header .memberList .user {
-  background: url("../images/header_userIC.png") no-repeat center;
+  background: url("../images_darkblue/header_userIC.png") no-repeat center;
   background-size: contain;
 }
 
 header .lang {
-  background: url("../images/header_langIC.png") no-repeat center;
+  background: url("../images_darkblue/header_langIC.png") no-repeat center;
   background-size: contain;
 }
 
 nav i {
-  background: url("../images/nav_IC.png") no-repeat;
+  background: url("../images_darkblue/nav_IC.png") no-repeat;
   background-size: 500%;
 }
 
 aside .ad_1 {
-  background: url("../images/aside_ad.png") no-repeat center;
+  background: url("../images_darkblue/aside_ad.png") no-repeat center;
   background-size: contain;
 }
 
-.mainArea .topBtnBox li:hover::before,
-.mainArea .topBtnBox li:hover::after {
-  background: url("../images/mainArea_topBtn_corner_hover.png") no-repeat;
-  background-size: contain;
-}
-
-.mainArea .topBtnBox li:active::before,
-.mainArea .topBtnBox li:active::after,
-.mainArea .topBtnBox li.active::before,
-.mainArea .topBtnBox li.active::after {
-  background: url("../images/mainArea_topBtn_corner.png") no-repeat;
-  background-size: contain;
+.mainArea {
+  background: url("../images_darkblue/mainArea_BG.jpg") no-repeat top center;
+  background-size: cover;
 }
 
 .mainArea .topBtnBox button i {
-  background: url("../images/mainArea_topBtn_collapse.png") no-repeat center;
-  background-size: contain;
-}
-
-.mainArea .tableList .title p::before {
-  background: url("../images/mainArea_tableTitle_corner.png") no-repeat center;
-  background-size: contain;
+  background: url("../images_darkblue/mainArea_topBtn_collapse.png") no-repeat;
+  background-size: 100%;
 }
 
 .mainArea .tableList .title i {
-  background: url("../images/arrow_1.png") no-repeat center;
+  background: url("../images_darkblue/arrow_1.png") no-repeat center;
   background-size: contain;
 }
 
 .mainArea .tableList .left .analyze {
-  background: url("../images/mainArea_tableTitle_leftIC.png") no-repeat;
+  background: url("../images_darkblue/mainArea_tableTitle_leftIC.png") no-repeat;
   background-size: 100%;
 }
 
 footer .top i {
-  background: url("../images/footer_listIC.png") no-repeat;
+  background: url("../images_darkblue/footer_listIC.png") no-repeat;
   background-size: 500%;
 }
 
-footer .top li::before,
-footer .top li::after {
-  background: url("../images/footer_corner.png") no-repeat center;
-  background-size: contain;
-}
-
 .chatroom .title i {
-  background: url("../images/header_userIC.png") no-repeat center;
+  background: url("../images_darkblue/chatroom_userIC.png") no-repeat center;
   background-size: contain;
 }
 
@@ -204,7 +182,7 @@ html body header {
 html body header .topArea {
   width: 100%;
   height: 100px;
-  background: #2b6de7;
+  border-bottom: solid 1px #28387c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,22 +193,12 @@ html body header .topArea {
 html body header .topArea .left {
   width: auto;
   height: 100%;
-  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-}
-html body header .topArea .left::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -145px;
-  width: 145px;
-  height: 100%;
 }
 html body header .topArea .left ul {
   width: auto;
@@ -266,14 +234,13 @@ html body header .topArea .left ul li i.pro {
   background-position-x: 100%;
 }
 html body header .topArea .left ul li p {
-  color: #172c63;
+  color: #aab1d4;
   font-size: 13px;
   font-weight: bold;
 }
 html body header .topArea .right {
   width: auto;
   height: 100%;
-  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,18 +251,7 @@ html body header .topArea .right {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
   padding-right: 30px;
-}
-html body header .topArea .right::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -145px;
-  width: 145px;
-  height: 100%;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
 }
 html body header .topArea .right .top {
   width: auto;
@@ -320,21 +276,29 @@ html body header .topArea .right .top .infoArea ul {
 html body header .topArea .right .top .infoArea ul li {
   width: auto;
   height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#52506c), color-stop(72%, #23306b));
+  background: linear-gradient(to right, #52506c 0%, #23306b 72%);
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3137254902);
+          box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3137254902);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3px 0 2px 12px;
   margin-bottom: 10px;
 }
 html body header .topArea .right .top .infoArea ul li:last-child {
+  background: -webkit-gradient(linear, left top, right top, from(#455f5f), color-stop(72%, #23306b));
+  background: linear-gradient(to right, #455f5f 0%, #23306b 72%);
   margin: 0;
 }
 html body header .topArea .right .top .infoArea ul li i {
   width: 17px;
   height: 17px;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 html body header .topArea .right .top .infoArea ul li i.money {
   background-position-x: 0;
@@ -345,9 +309,7 @@ html body header .topArea .right .top .infoArea ul li i.vip {
 html body header .topArea .right .top .infoArea ul li p {
   width: 105px;
   height: 20px;
-  border: solid 1px #e5e9ec;
-  border-radius: 2px;
-  color: #172c63;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -356,7 +318,6 @@ html body header .topArea .right .top .infoArea ul li p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 5px;
 }
 html body header .topArea .right .top .memberList {
   width: auto;
@@ -376,7 +337,7 @@ html body header .topArea .right .top .memberList .user {
   margin-right: 15px;
 }
 html body header .topArea .right .top .memberList p {
-  color: #172c63;
+  color: #ffffff;
   font-size: 18px;
   font-weight: bold;
   display: -webkit-box;
@@ -396,14 +357,14 @@ html body header .topArea .right .top .memberList p span {
   height: 0;
   border-style: solid;
   border-width: 5px 4px 0 4px;
-  border-color: #ff8656 transparent;
+  border-color: #ffffff transparent;
   margin: 4px 0 0 10px;
 }
 html body header .topArea .right .top .memberList ul {
   display: none;
   width: auto;
   height: auto;
-  background: #ff8656;
+  background: #ffffff;
   position: absolute;
   right: 0;
   top: 35px;
@@ -414,14 +375,14 @@ html body header .topArea .right .top .memberList ul.display {
   display: block;
 }
 html body header .topArea .right .top .memberList ul li {
-  color: #ffffff;
+  color: #121212;
   font-size: 14px;
   font-weight: bold;
   white-space: nowrap;
   padding: 5px 10px;
 }
 html body header .topArea .right .top .memberList ul li:hover, html body header .topArea .right .top .memberList ul li:active, html body header .topArea .right .top .memberList ul li.active {
-  background: #2b6de7;
+  background: #efefef;
 }
 html body header .topArea .right .bottom {
   width: auto;
@@ -450,7 +411,7 @@ html body header .topArea .right .bottom .outerList li:first-child {
   margin-right: 40px;
 }
 html body header .topArea .right .bottom .outerList li p {
-  color: #172c63;
+  color: #aab1d4;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -466,7 +427,7 @@ html body header .topArea .right .bottom .outerList li p span {
   height: 0;
   border-style: solid;
   border-width: 5px 4px 0 4px;
-  border-color: #ff8656 transparent;
+  border-color: #ffffff transparent;
   margin-left: 10px;
 }
 html body header .topArea .right .bottom .lang {
@@ -479,7 +440,7 @@ html body header .topArea .right .bottom .lang ul {
   display: none;
   width: auto;
   height: auto;
-  background: #ff8656;
+  background: #ffffff;
   position: absolute;
   right: 0;
   top: 20px;
@@ -490,19 +451,19 @@ html body header .topArea .right .bottom .lang ul.display {
   display: block;
 }
 html body header .topArea .right .bottom .lang ul li {
-  color: #ffffff;
+  color: #121212;
   font-size: 14px;
   font-weight: bold;
   white-space: nowrap;
   padding: 5px 10px;
 }
 html body header .topArea .right .bottom .lang ul li:hover, html body header .topArea .right .bottom .lang ul li:active, html body header .topArea .right .bottom .lang ul li.active {
-  background: #2b6de7;
+  background: #efefef;
 }
 html body header .teamArea {
   width: 100%;
   height: 120px;
-  background: #e6ecf8;
+  background: #04061c;
   padding: 5px 20px;
 }
 html body header .teamArea .outerBox {
@@ -522,41 +483,45 @@ html body header .teamArea .outerBox::-webkit-scrollbar {
   height: 5px;
 }
 html body header .teamArea .outerBox::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #0a0d2b;
   border-radius: 10px;
 }
 html body header .teamArea .outerBox::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #727ebb;
   border-radius: 10px;
 }
 html body header .teamArea .outerBox .teamBox {
   width: 350px;
   height: 85px;
-  background: #ffffff;
+  background: -webkit-gradient(linear, left top, right top, from(#009fff), to(#037bfd));
+  background: linear-gradient(to right, #009fff 0%, #037bfd 100%);
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3137254902);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3137254902);
   position: relative;
   overflow: hidden;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding-left: 5px;
   margin-right: 20px;
 }
-html body header .teamArea .outerBox .teamBox::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 5px;
-  height: 100%;
-  background: #ff8451;
+html body header .teamArea .outerBox .teamBox:nth-of-type(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#ab56f6), to(#6b53f7));
+  background: linear-gradient(to right, #ab56f6 0%, #6b53f7 100%);
+}
+html body header .teamArea .outerBox .teamBox:nth-of-type(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#3cc84f), to(#0bba6a));
+  background: linear-gradient(to right, #3cc84f 0%, #0bba6a 100%);
+}
+html body header .teamArea .outerBox .teamBox:nth-of-type(4) {
+  background: -webkit-gradient(linear, left top, right top, from(#fd7f5c), to(#fb5d97));
+  background: linear-gradient(to right, #fd7f5c 0%, #fb5d97 100%);
 }
 html body header .teamArea .outerBox .teamBox .league {
-  color: #9c9c9c;
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
+  opacity: 0.65;
   padding-top: 8px;
 }
 html body header .teamArea .outerBox .teamBox .center {
@@ -575,7 +540,7 @@ html body header .teamArea .outerBox .teamBox .center {
 }
 html body header .teamArea .outerBox .teamBox .center p {
   width: 40%;
-  color: #172c63;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   overflow: hidden;
@@ -584,7 +549,6 @@ html body header .teamArea .outerBox .teamBox .center p {
 }
 html body header .teamArea .outerBox .teamBox .center p.score {
   width: auto;
-  color: #dd5664;
 }
 html body header .teamArea .outerBox .teamBox .bottom {
   width: 100%;
@@ -602,18 +566,19 @@ html body header .teamArea .outerBox .teamBox .bottom {
 }
 html body header .teamArea .outerBox .teamBox .bottom p {
   width: 30%;
-  color: #9c9c9c;
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
 html body header .teamArea .outerBox .teamBox .bottom p:nth-of-type(2) {
   width: auto;
+  opacity: 0.65;
 }
 html body nav {
   width: 80px;
   height: 100%;
-  background: #0e459f;
+  background: #0f1945;
   position: absolute;
   top: 0;
   left: 0;
@@ -629,29 +594,49 @@ html body nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-top: 230px;
 }
 html body nav ul li {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
+  width: 70px;
+  height: 60px;
+  border-radius: 16px 0 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
   cursor: pointer;
   margin-bottom: 10px;
+  padding-left: 18px;
+}
+html body nav ul li::before, html body nav ul li::after {
+  display: none;
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #0a0d2b transparent;
+}
+html body nav ul li::before {
+  bottom: -8px;
+  border-width: 8px 0 0 8px;
+}
+html body nav ul li::after {
+  top: -8px;
+  border-width: 0 0 8px 8px;
 }
 html body nav ul li:hover, html body nav ul li:active, html body nav ul li.active {
-  background: #ffffff;
+  background: #0a0d2b;
+}
+html body nav ul li:hover::before, html body nav ul li:hover::after, html body nav ul li:active::before, html body nav ul li:active::after, html body nav ul li.active::before, html body nav ul li.active::after {
+  display: block;
 }
 html body nav ul li:hover i, html body nav ul li:active i, html body nav ul li.active i {
   background-position-y: 100%;
@@ -678,9 +663,7 @@ html body nav ul li i.tennis {
 html body aside {
   width: 205px;
   height: 100%;
-  background: #ffffff;
-  -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.1215686275);
-          box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.1215686275);
+  background: #11153b;
   position: absolute;
   right: 0;
   top: 0;
@@ -695,7 +678,6 @@ html body aside a {
 html body .mainArea {
   width: 100%;
   height: 100%;
-  background: #dddddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,9 +706,6 @@ html body .mainArea .topBtnBox {
 html body .mainArea .topBtnBox ul {
   width: auto;
   height: auto;
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -734,6 +713,8 @@ html body .mainArea .topBtnBox ul {
 html body .mainArea .topBtnBox ul li {
   width: auto;
   height: 32px;
+  background: #1a224e;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -743,56 +724,30 @@ html body .mainArea .topBtnBox ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
   cursor: pointer;
-  padding: 0 16px;
-  margin: 0 16px;
+  padding: 0 32px;
+  margin-right: 5px;
 }
-html body .mainArea .topBtnBox ul li::before, html body .mainArea .topBtnBox ul li::after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 34px;
-  height: 100%;
+html body .mainArea .topBtnBox ul li:hover, html body .mainArea .topBtnBox ul li:active, html body .mainArea .topBtnBox ul li.active {
+  background: -webkit-gradient(linear, left top, right top, from(#009fff), to(#037bfd));
+  background: linear-gradient(to right, #009fff 0%, #037bfd 100%);
 }
-html body .mainArea .topBtnBox ul li::before {
-  left: -34px;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-}
-html body .mainArea .topBtnBox ul li::after {
-  right: -34px;
-}
-html body .mainArea .topBtnBox ul li:hover {
-  background: #ff8656;
-  z-index: 1;
-}
-html body .mainArea .topBtnBox ul li:hover::before, html body .mainArea .topBtnBox ul li:hover::after {
-  display: block;
-}
-html body .mainArea .topBtnBox ul li:hover p {
+html body .mainArea .topBtnBox ul li:hover p, html body .mainArea .topBtnBox ul li:active p, html body .mainArea .topBtnBox ul li.active p {
   color: #ffffff;
-}
-html body .mainArea .topBtnBox ul li:active, html body .mainArea .topBtnBox ul li.active {
-  background: #2b6de7;
-}
-html body .mainArea .topBtnBox ul li:active::before, html body .mainArea .topBtnBox ul li:active::after, html body .mainArea .topBtnBox ul li.active::before, html body .mainArea .topBtnBox ul li.active::after {
-  display: block;
-}
-html body .mainArea .topBtnBox ul li:active p, html body .mainArea .topBtnBox ul li.active p {
-  color: #ffffff;
+  font-weight: bold;
 }
 html body .mainArea .topBtnBox ul li p {
-  color: #9c9c9c;
-  font-size: 18px;
-  font-weight: bold;
+  color: #aab1d4;
+  font-size: 16px;
 }
 html body .mainArea .topBtnBox button {
   width: auto;
   height: 36px;
-  background: #ffffff;
+  background: #1a224e;
   border-radius: 10px;
+  color: #aab1d4;
+  font-size: 15px;
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -804,15 +759,17 @@ html body .mainArea .topBtnBox button {
           justify-content: center;
   padding: 0 10px;
 }
+html body .mainArea .topBtnBox button:hover, html body .mainArea .topBtnBox button:active, html body .mainArea .topBtnBox button.active {
+  background: #028bfe;
+  color: #ffffff;
+}
+html body .mainArea .topBtnBox button:hover i, html body .mainArea .topBtnBox button:active i, html body .mainArea .topBtnBox button.active i {
+  background-position-y: 100%;
+}
 html body .mainArea .topBtnBox button i {
   width: 30px;
   height: 15px;
   margin-right: 5px;
-}
-html body .mainArea .topBtnBox button p {
-  color: #172c63;
-  font-size: 15px;
-  font-weight: bold;
 }
 html body .mainArea .tableList {
   width: 100%;
@@ -825,18 +782,16 @@ html body .mainArea .tableList::-webkit-scrollbar {
   height: 5px;
 }
 html body .mainArea .tableList::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #0a0d2b;
   border-radius: 10px;
 }
 html body .mainArea .tableList::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #727ebb;
   border-radius: 10px;
 }
 html body .mainArea .tableList .listBox {
   width: 100%;
   height: 47px;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1215686275);
   border-radius: 10px;
   overflow: hidden;
   -webkit-transition: 0.3s all;
@@ -856,7 +811,7 @@ html body .mainArea .tableList .listBox:last-child {
 html body .mainArea .tableList .listBox .title {
   width: 100%;
   height: 47px;
-  background: #2b6de7;
+  background: #1a224e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,8 +826,7 @@ html body .mainArea .tableList .listBox .title {
 html body .mainArea .tableList .listBox .title p {
   width: auto;
   height: 47px;
-  background: #ffffff;
-  color: #7b829f;
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
   display: -webkit-inline-box;
@@ -884,16 +838,7 @@ html body .mainArea .tableList .listBox .title p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
   padding: 0 16px 0 32px;
-}
-html body .mainArea .tableList .listBox .title p::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -80px;
-  width: 80px;
-  height: 100%;
 }
 html body .mainArea .tableList .listBox .title i {
   width: 17px;
@@ -905,29 +850,16 @@ html body .mainArea .tableList .listBox .title i {
 html body .mainArea .tableList .listBox .tableBox {
   width: 100%;
   height: auto;
-  background: #ffffff;
+  background: #1f295b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-html body .mainArea .tableList .listBox .tableBox:last-child::before {
-  display: none;
-}
-html body .mainArea .tableList .listBox .tableBox::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: -1px;
-  width: calc(100% - 64px);
-  height: 2px;
-  background: #e5e9ec;
-}
 html body .mainArea .tableList .listBox .tableBox .left {
   width: auto;
   height: auto;
+  border-bottom: solid 1px #354388;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -940,8 +872,11 @@ html body .mainArea .tableList .listBox .tableBox .left tr th {
 html body .mainArea .tableList .listBox .tableBox .left tr th button {
   width: auto;
   height: auto;
-  background: #efefef;
+  background: #17204d;
   border-radius: 20px;
+  color: #5d6694;
+  font-size: 12px;
+  font-weight: bold;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -952,38 +887,44 @@ html body .mainArea .tableList .listBox .tableBox .left tr th button {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 3px 10px;
-  margin-right: 10px;
   pointer-events: none;
+  margin-right: 10px;
 }
-html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active {
-  background: #ff8656;
+html body .mainArea .tableList .listBox .tableBox .left tr th button.active {
+  background: -webkit-gradient(linear, left top, right top, from(#386b76), to(#394584));
+  background: linear-gradient(to right, #386b76 0%, #394584 100%);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3137254902);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3137254902);
+  color: #36d84c;
   pointer-events: visible;
 }
-html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active i {
-  background: #ffffff;
+html body .mainArea .tableList .listBox .tableBox .left tr th button:hover, html body .mainArea .tableList .listBox .tableBox .left tr th button:active {
+  background: #394685;
+  -webkit-box-shadow: 0 0 5px 1px #36d84c;
+          box-shadow: 0 0 5px 1px #36d84c;
 }
-html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active p {
-  color: #ffffff;
+html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child.active i {
+  background: #36d84c;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:first-child i {
   height: 12px;
-  background: #9c9c9c;
+  background: #5d6694;
   border-radius: 50%;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active {
-  background: #2b6de7;
-  pointer-events: visible;
+  background: -webkit-gradient(linear, left top, right top, from(#386ba3), to(#394584));
+  background: linear-gradient(to right, #386ba3 0%, #394584 100%);
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active i {
   background-position-y: 100%;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child.active p {
-  color: #ffffff;
+  color: #36dcff;
 }
-html body .mainArea .tableList .listBox .tableBox .left tr th button p {
-  color: #9c9c9c;
-  font-size: 12px;
-  font-weight: bold;
+html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child:hover, html body .mainArea .tableList .listBox .tableBox .left tr th button:last-child:active {
+  background: #394685;
+  -webkit-box-shadow: 0 0 5px 1px #36dcff;
+          box-shadow: 0 0 5px 1px #36dcff;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr th button i {
   width: 12px;
@@ -1000,7 +941,7 @@ html body .mainArea .tableList .listBox .tableBox .left tr td:first-child {
   padding: 10px 32px;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr td:first-child p {
-  color: #9c9c9c;
+  color: #aab1d4;
   line-height: 18px;
   padding: 0;
 }
@@ -1008,11 +949,11 @@ html body .mainArea .tableList .listBox .tableBox .left tr td:nth-of-type(2) {
   width: 250px;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr td:last-child p {
-  border-right: solid 1px #e5e9ec;
+  border-right: solid 1px #354388;
   padding-right: 32px;
 }
 html body .mainArea .tableList .listBox .tableBox .left tr td p {
-  color: #172c63;
+  color: #ffffff;
   font-size: 13px;
   font-weight: bold;
 }
@@ -1025,6 +966,7 @@ html body .mainArea .tableList .listBox .tableBox .left tr td p:last-child {
 html body .mainArea .tableList .listBox .tableBox .outerBox {
   width: 100%;
   height: auto;
+  border-bottom: solid 1px #354388;
   padding-bottom: 5px;
   overflow: hidden;
 }
@@ -1038,11 +980,11 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-s
   height: 5px;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #0a0d2b;
   border-radius: 10px;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #727ebb;
   border-radius: 10px;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul {
@@ -1065,7 +1007,7 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li:last
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .smallTitle {
   width: 100%;
   height: 30%;
-  color: #ff8656;
+  color: #ffffff;
   font-size: 13px;
   font-weight: bold;
   display: -webkit-box;
@@ -1081,7 +1023,7 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .sma
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .text {
   width: 100%;
   height: 70%;
-  color: #bcc3cd;
+  color: #aab1d4;
   font-size: 13px;
   font-weight: bold;
   display: -webkit-box;
@@ -1099,16 +1041,17 @@ html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .tex
           justify-content: center;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .text span {
-  color: #172c63;
+  color: #ffffff;
   line-height: 18px;
 }
 html body .mainArea .tableList .listBox .tableBox .outerBox .innerBox ul li .text span.disable {
-  color: #bcc3cd;
+  color: #aab1d4;
 }
 html body .mainArea .tableList .listBox .tableBox .right {
   width: 130px;
   height: auto;
-  background: #f1f8ff;
+  background: #2a356e;
+  border-bottom: solid 1px #5161b1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -1129,13 +1072,13 @@ html body .mainArea .tableList .listBox .tableBox .right li:last-child {
   height: 70%;
 }
 html body .mainArea .tableList .listBox .tableBox .right li .smallTitle {
-  color: #ff8656;
+  color: #ffffff;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
 }
 html body .mainArea .tableList .listBox .tableBox .right li .disable {
-  color: #bcc3cd;
+  color: #aab1d4;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -1146,7 +1089,7 @@ html body .mainArea .tableList .listBox .tableBox .right li .cardBox {
   margin-right: 10px;
 }
 html body .mainArea .tableList .listBox .tableBox .right li .cardBox p {
-  color: #172c63;
+  color: #ffffff;
   font-size: 12px;
   font-weight: bold;
   display: -webkit-box;
@@ -1171,7 +1114,7 @@ html body .mainArea .tableList .listBox .tableBox .right li .cardBox p i.yellow 
 html body .mainArea .tableList .listBox .tableBox .right li .gameTime span {
   display: block;
   width: 100%;
-  color: #172c63;
+  color: #ffffff;
   font-size: 13px;
   font-weight: bold;
   text-align: right;
@@ -1181,13 +1124,12 @@ html body footer {
   width: 100%;
   min-width: 1000px;
   height: auto;
-  background: #2b6de7;
+  background: #04061c;
   padding: 0 205px 0 80px;
 }
 html body footer .top {
   width: 100%;
   height: 45px;
-  background: #f1f8ff;
 }
 html body footer .top ul {
   width: 100%;
@@ -1198,13 +1140,11 @@ html body footer .top ul {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 html body footer .top ul li {
   width: auto;
   height: 43px;
+  border-bottom: solid 2px transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,38 +1153,22 @@ html body footer .top ul li {
           align-items: center;
   position: relative;
   cursor: pointer;
-  margin: 0 20px;
-}
-html body footer .top ul li::before, html body footer .top ul li::after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 40px;
-  height: 100%;
-}
-html body footer .top ul li::before {
-  left: -40px;
-}
-html body footer .top ul li::after {
-  right: -40px;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  margin: 0 10px;
+  padding: 0 20px;
 }
 html body footer .top ul li:hover, html body footer .top ul li:active, html body footer .top ul li.active {
-  background: #2b6de7;
-}
-html body footer .top ul li:hover::before, html body footer .top ul li:hover::after, html body footer .top ul li:active::before, html body footer .top ul li:active::after, html body footer .top ul li.active::before, html body footer .top ul li.active::after {
-  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0e355c), to(#04061c));
+  background: linear-gradient(to top, #0e355c 0%, #04061c 100%);
+  border-color: #27afff;
 }
 html body footer .top ul li:hover p, html body footer .top ul li:active p, html body footer .top ul li.active p {
-  color: #ffffff;
+  color: #27afff;
 }
 html body footer .top ul li:hover i, html body footer .top ul li:active i, html body footer .top ul li.active i {
   background-position-y: 100%;
 }
 html body footer .top ul li p {
-  color: #9c9c9c;
+  color: #aab1d4;
   font-size: 14px;
   font-weight: bold;
 }
@@ -1278,12 +1202,10 @@ html body footer .bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 20px;
 }
 html body footer .bottom p {
-  color: #ffffff;
+  color: #aab1d4;
   font-size: 14px;
   font-weight: bold;
 }
@@ -1291,8 +1213,8 @@ html body .chatroom {
   width: auto;
   height: auto;
   border-radius: 10px 10px 0 0;
-  -webkit-box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.1215686275);
-          box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.1215686275);
+  -webkit-box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.3137254902);
+          box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.3137254902);
   position: fixed;
   right: 100px;
   bottom: 0;
@@ -1304,7 +1226,8 @@ html body .chatroom.active .chatBox {
 html body .chatroom .title {
   width: 300px;
   height: 40px;
-  background: #ff8656;
+  background: -webkit-gradient(linear, left top, right top, from(#009fff), to(#037bfd));
+  background: linear-gradient(to right, #009fff 0%, #037bfd 100%);
   border-radius: 10px 10px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1333,8 +1256,6 @@ html body .chatroom .title p {
 html body .chatroom .title p i {
   width: 20px;
   height: 24px;
-  -webkit-filter: grayscale(1) brightness(10);
-          filter: grayscale(1) brightness(10);
   margin-right: 10px;
 }
 html body .chatroom .chatBox {
@@ -1348,7 +1269,8 @@ html body .chatroom .chatBox {
 html body .chatroom .chatBox .chatArea {
   width: 100%;
   height: 80%;
-  border-bottom: solid 1px #e5e9ec;
+  background: #efefef;
+  border-bottom: solid 1px #cccccc;
   overflow-y: auto;
   padding: 10px;
 }
@@ -1357,11 +1279,11 @@ html body .chatroom .chatBox .chatArea::-webkit-scrollbar {
   height: 5px;
 }
 html body .chatroom .chatBox .chatArea::-webkit-scrollbar-track {
-  background: #efefef;
+  background: #0a0d2b;
   border-radius: 10px;
 }
 html body .chatroom .chatBox .chatArea::-webkit-scrollbar-thumb {
-  background: #2b6de7;
+  background: #727ebb;
   border-radius: 10px;
 }
 html body .chatroom .chatBox .chatArea div {
@@ -1374,7 +1296,8 @@ html body .chatroom .chatBox .chatArea div.cus {
 }
 html body .chatroom .chatBox .chatArea div p {
   display: inline-block;
-  background: #2b6de7;
+  background: -webkit-gradient(linear, left top, right top, from(#009fff), to(#037bfd));
+  background: linear-gradient(to right, #009fff 0%, #037bfd 100%);
   border-radius: 30px;
   color: #ffffff;
   font-size: 14px;
