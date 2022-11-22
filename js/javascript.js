@@ -143,3 +143,30 @@ $(function(){
         .toggleClass("active");
     })
 })
+
+//切換css
+$(function(){
+    $("header .left .btnBox button").on("click",function(){
+        var n = $(this).index();
+
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+
+        if(n == 0)
+        {
+            $(".cssList")
+            .attr("href","./css/style.css");
+        }
+        else if(n == 1)
+        {
+            $(".cssList")
+            .attr("href","./css_darkblue/style.css");
+        }
+        else if(n == 2)
+        {
+            $(".cssList")
+            .attr("href","./css_pink/style.css");
+        }
+    })
+})

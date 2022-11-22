@@ -199,6 +199,7 @@ html body header .topArea .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 html body header .topArea .left ul {
   width: auto;
@@ -237,6 +238,38 @@ html body header .topArea .left ul li p {
   color: #aab1d4;
   font-size: 13px;
   font-weight: bold;
+}
+html body header .topArea .left .btnBox {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+}
+html body header .topArea .left .btnBox button {
+  width: 20px;
+  height: 20px;
+  border: solid 2px transparent;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+html body header .topArea .left .btnBox button:nth-of-type(1) {
+  background: #ffffff;
+  border-color: #2b6de7;
+}
+html body header .topArea .left .btnBox button:nth-of-type(2) {
+  background: #2a356e;
+  border-color: #7d86ae;
+}
+html body header .topArea .left .btnBox button:nth-of-type(3) {
+  background: #ffffff;
+  border-color: #7a072c;
+}
+html body header .topArea .left .btnBox button:hover, html body header .topArea .left .btnBox button:active, html body header .topArea .left .btnBox button.active {
+  border-width: 4px;
 }
 html body header .topArea .right {
   width: auto;
